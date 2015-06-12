@@ -15,26 +15,44 @@ function dugnad_shortcode() {
 	
 	ob_start(); // Here's a cool way to do markup inside our function
 	?>
-	<div id="calcform">
-		<form oninput="updateRanges()">
-			<h4 id="calc-heading">Dugnadskalkulator</h4>
-			<div id="calc-content">
-				<div class="slider"> 
-					<output class="styled-output" for="r1">1</output>
-					<label for="r1">Antall personer / percipients </label>
-					<input type="range" name="r1" step="1" min="1" max="40" value="1">
-				</div> 
-				<div class="slider">
-					<output class="styled-output" for="r2">1</output>
-					<label for="r2">Salg / Sale</label>
-					<input type="range" name="r2" step="1" min="0" max="40" value="1">
-				</div>
-				<div class="result">
-					Du tjener / You earn <span>220</span> Kr
-				</div>
-			</div>
-		</form>
-	</div>
+<div id="calc-form">
+    <!-- <form oninput="updateRanges()"> -->
+<form oninput="updateRanges()" onchange="updateRanges()">  <!-- For IE--->       	                                        
+              <div id="calc-heading">Dugnadskalkulator</div>                           
+              
+         <div id="calc-content">                                  
+                      <div class="calcslider">Hvor mye penger ønsker gruppen å tjene? 
+                       <div class="styled-output"><output for="r10">1400</output>kr</div> 
+                                       
+                                       <input type="range" name="r10" step="1400" min="1400" max="160000" value="0">
+                      </div>  
+
+		  <div class="resultat-salgprodukter">Antall produkter å selge: <span>20</span> <br /></div>                                 
+                        <div class="calcslider">Velg antall deltagere i gruppen: <br /></div>
+                         <div class="styled-output"><output for="r20">1</output></div> 
+                                       
+                                       <input type="range" name="r20" step="1" min="1" max="40" value="1">
+                    
+               <div class="resultat-salgdeltager">Antall bursdagsesker pr. deltager: <br><span>20</span></div>
+                          
+               <div id="calc-sammendrag-heading">Sammendrag</div>
+               <div class="calc-sammendrag">
+                                  
+               		<p>
+               		<div class="resultat-salgprodukter">
+                  		 Antall Produkter Totalt: <span>20</span> 
+               		</div>
+                                  
+               		<div class="resultat-kartonger">
+               		     Antall Kartonger a 20 Esker: <span>1</span>
+              		</div>
+                                  
+              			 Fortjeneste pr. Produkt 70 Kr
+              		<br />Anbefalt utsalgspris 130kr
+               </div>
+          </div>                           
+    </form>
+</div>
 	<?php
 	
 	return ob_get_clean(); // return markup
