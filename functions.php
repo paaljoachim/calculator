@@ -1,5 +1,36 @@
 //* This is code for adding a shortcode instead of adding html directly to a text widget.
 /*
+Here's a super simple way to turn our dugnadskalkulator into a shortcode.
+I'm kinda conflicted as to whether this would actually be useful, but as a demo it's ok.
+I mean, if you're in a situation where you actually need this calculator, you would probably only need it once, and a page template might be a better solution. 
+
+Firstly, we adjust the way we load in our js.
+*/
+
+// In our script handling file, or maybe directly in a shortcode file, we do a script register
+function dugnad_script_reg(){
+	
+	wp_register_script(
+		'dugnadskalkulator',
+		get_stylesheet_directory_uri().'/assets/js/dugnadskalkulator.js',
+		array('jquery'),
+		null, // versioning is nice, but not needed
+		true // make sure the js goes in the footer
+	);
+	
+	/*	
+	We do not enqueue it, however, since this is done in the shortcode instead.
+	This way, the js is only loaded into the page if our shortcode is used.
+	We could probably do something similar for a stylesheet?
+	*/
+	
+}
+
+// add the action
+add_action('wp_enqueue_scripts','dugnad_script_reg');
+
+
+/*
 Somewhere in our setup (eg. the functions file, or somewhere else), we'll create a new shortcode.
 I tweaked the markup a bit, nothing too fancy, might need a css update, though...
 It's more of a 'noone likes divsoup' approach, I guess.
@@ -15,7 +46,7 @@ function dugnad_shortcode() {
 	
 	ob_start(); // Here's a cool way to do markup inside our function
 	?>
-<div id="calc-form">
+	<div id="calc-form">
     <!-- <form oninput="updateRanges()"> -->
 <form oninput="updateRanges()" onchange="updateRanges()">  <!-- For IE--->       	                                        
               <div id="calc-heading">Dugnadskalkulator</div>                           
@@ -66,3 +97,4 @@ add_shortcode( 'dugnadskalkulator', 'dugnad_shortcode' );
 Really, the hardest part of all this is where to put this stuff. If we add it directly to our theme, the shortcode becomes invalid if the theme is changed. IMHO, dead shortcodes are just as bad as dead urls.
 The most sensible thing would be to wrap it all up in a tiny custom plugin. If we were to "mu" the thing, it wouldn't be too much of a hazzle. Thoughts?
 */
+
