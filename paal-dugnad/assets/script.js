@@ -18,7 +18,6 @@ function updateRanges(){
  var rangeVals = {
  'one' : parseInt(jQuery('input[name="r10"]').val()), // Hvor mye penger ønsker gruppen å tjene? (How much money does the group want to earn?)
  'two' : parseInt(jQuery('input[name="r20"]').val()), // Velg antall deltagere i gruppen:
-(Select amount of participants in the group:)  
  };
  
  // Do the math
@@ -30,7 +29,6 @@ jQuery('.resultat-salgdeltager span').html(Math.round((rangeVals.one / 70 / rang
 jQuery('.resultat-produktertotalt span').html(Math.round((rangeVals.one / 70) * 1) / 1); // Antall Produkter Totalt: (Total product amount)
 
 jQuery('.resultat-kartonger span').html(rangeVals.one / 70 / 20); // Antall Kartonger a 20 esker 
-(Amount of cartons of 20 boxes)
 }
 
 // Code that helps the calculator work in IE

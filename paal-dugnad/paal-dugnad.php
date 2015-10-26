@@ -44,6 +44,7 @@ function dugnad_shortcode() {
 	// Enqueue our registered script to be added in the footer, when our shortcode is used.
 	// Should work, according to http://mikejolley.com/2013/12/sensible-script-enqueuing-shortcodes/
 	wp_enqueue_script('dugnadskalkulator');
+    wp_enqueue_style('dugnadskalkulator');
 	
 	ob_start(); // Begin output buffer
 	?>
