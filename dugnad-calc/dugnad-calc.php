@@ -3,7 +3,7 @@
 /*
 Plugin name: Dugnadscalculator Shortcode
 Description: Makes a shortcode [dugnadskalkulator] to put a dugnadscalculator anywhere on your page
-Author: Paal Joachim Romdahl
+Author: Paal Joachim Romdahl and Jeppe Jeppe Lindø Sigaard
 Author uri: http://www.easywebdesigntutorials.com/
 */
 
