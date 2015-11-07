@@ -2,8 +2,8 @@
 
 /*
 Plugin name: Dugnadscalculator Shortcode
-Description: Makes a shortcode [dugnadskalkulator] to put a dugnadscalculator anywhere on your page
-Author: Paal Joachim Romdahl and Jeppe Jeppe Lindø Sigaard
+Description: Makes a shortcode [dugnadskalkulator] to place a dugnadscalculator anywhere on your page.
+Author: Paal Joachim Romdahl 
 Author uri: http://www.easywebdesigntutorials.com/
 */
 
@@ -61,17 +61,17 @@ function dugnad_shortcode() {
                 <div class="calcslider">Velg antall deltagere i gruppen: <br /></div>
                 <div class="styled-output"><output for="r20">1</output></div> 
                 <input type="range" name="r20" step="1" min="1" max="40" value="1">
-                <div class="resultat-salgdeltager">Antall bursdagsesker pr. deltager: <br><span>20</span></div>        
+                <div class="resultat-salgdeltager">Antall produkter pr. deltager: <br><span>20</span></div>        
                 <div id="calc-sammendrag-heading">Sammendrag</div>
                 <div class="calc-sammendrag">
                     <div class="resultat-salgprodukter">
-                        Antall Produkter Totalt: <span>20</span> 
+                        Antall produkter totalt: <span>20</span> 
                     </div>
-                    <div class="resultat-kartonger">
-                        Antall Kartonger a 20 Esker: <span>1</span>
-                    </div>
-                    Fortjeneste pr. Produkt 80 Kr<br />
-                    Anbefalt utsalgspris 150kr
+                    <!--<div class="resultat-kartonger">
+                        Antall kartonger a 20 esker: <span>1</span>
+                    </div>  -->
+                    Fortjeneste pr. produkt 80 Kr<br />
+                    Anbefalt utsalgspris <b>150kr</b>
                </div>
             </div>                           
 	    </form>
