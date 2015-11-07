@@ -21,7 +21,7 @@ function updateRanges(){
  };
  
  // Do the math
-jQuery('.resultat-salgprodukter span').html(Math.round((rangeVals.one / 80 / rangeVals.two) * 1) / 1); // Antall produkter å selge = (Amount of products to sell)
+jQuery('.resultat-salgprodukter span').html(Math.round((rangeVals.one / 80) * 1) / 1); // Antall produkter å selge = (Amount of products to sell)
  
 jQuery('.resultat-salgdeltager span').html(Math.round((rangeVals.one / 80 / rangeVals.two) * 1) / 1); // Antall salg pr. deltager (amount of sales per participant): 1 = no decimals, 100 = 2 decimals */ 
 
