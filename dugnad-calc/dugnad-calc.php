@@ -67,11 +67,11 @@ function dugnad_shortcode() {
                     <div class="resultat-salgprodukter">
                         Antall produkter totalt: <span>20</span> 
                     </div>
-                    <!--<div class="resultat-kartonger">
+                    <!-- <div class="resultat-kartonger">
                         Antall kartonger a 20 esker: <span>1</span>
                     </div>  -->
-                    Fortjeneste pr. produkt 80 Kr<br />
-                    Anbefalt utsalgspris <b>150kr</b>
+                    Fortjeneste pr. produkt: 80 Kr<br />
+                    Anbefalt utsalgspris: <b>150kr</b>
                </div>
             </div>                           
 	    </form>
